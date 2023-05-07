@@ -104,7 +104,7 @@ export default function Header({
         <div className={styles.header__searchBox}>
           <Image
             onClick={handleImageClick}
-            src="/search.png"
+            src="/Search.png"
             alt="search"
             width={24}
             height={24}
