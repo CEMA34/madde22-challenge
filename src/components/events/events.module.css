@@ -288,3 +288,25 @@
     right: 245px;
   }
 }
+
+@media (max-width: 360px) {
+  .events__frame__bgColor {
+    width: 327px;
+  }
+  .tiyatro {
+    right: 235px;
+  }
+
+  .stand-up {
+    right: 220px;
+  }
+
+  .sinema,
+  .konser,
+  .cocuk {
+    right: 235px;
+  }
+  .events__frame__image {
+    width: 290px;
+  }
+}
