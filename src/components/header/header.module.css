@@ -1,0 +1,286 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 37px 37px 0 37px;
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.header__title {
+  margin: 0;
+  margin-top: 55px;
+  margin-bottom: 40px;
+}
+
+.header__tags {
+  display: flex;
+  width: 100%;
+  max-width: 565px;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  font-weight: 400;
+}
+
+.header__tags__item {
+  text-decoration: none;
+  color: #000000;
+  transition-duration: 0.5s;
+  position: relative;
+  cursor: pointer;
+}
+
+.header__tags__item:hover {
+  color: #ff0d87;
+}
+
+.header__tags__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #ff0d87;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.header__tags__item:hover::before {
+  transform: scaleX(1);
+}
+
+.header__searchBox {
+  width: 100%;
+  max-width: 200px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #dedede;
+  padding: 1em;
+  position: absolute;
+  right: 20px;
+  bottom: 17px;
+}
+
+.header__searchBox img {
+  cursor: pointer;
+}
+
+.header__searchBox__input {
+  outline: none;
+  border-style: none;
+  margin-left: 8px;
+  width: inherit;
+}
+.header__searchBox__input::placeholder {
+  color: #9c9c9c;
+}
+
+.filterAndCalender {
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  position: relative;
+  align-items: center;
+  padding: 0 1em;
+  height: 52px;
+  margin-bottom: 60px;
+}
+
+.filterAndCalender__bgColor {
+  background-color: #f5f5f5;
+  position: absolute;
+  height: 52px;
+  z-index: -1;
+  width: 100%;
+}
+
+.filterAndCalender__filterBtn,
+.filterAndCalender__calenderBtn {
+  border-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.filterAndCalender__filterBtn__span,
+.filterAndCalender__calenderBtn__span {
+  color: #ff0d87;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 10px;
+  transition-duration: 0.5s;
+}
+
+.filterAndCalender__filterBtn__span:hover {
+  color: black;
+}
+
+.filterAndCalender__calenderBtn__span {
+  color: black;
+}
+
+.filterAndCalender__calenderBtn__span:hover {
+  color: #ff0d87;
+}
+
+.filterAndCalender__popup {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  height: 450px;
+  background-color: white;
+  position: absolute;
+  top: 52px;
+  z-index: 2;
+  left: 20px;
+  box-shadow: 0px 4px 50px rgba(81, 81, 81, 0.2);
+  padding: 0 32px;
+  justify-content: center;
+}
+
+.filterAndCalender__popup__inputs,
+.filterAndCalender__popup__dateInputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterAndCalender__popup__inputs label,
+.filterAndCalender__popup__dateInputs label {
+  height: 40px;
+  margin-top: 9px;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  width: 230px;
+}
+
+.filterAndCalender__popup__eventLocationTitle,
+.filterAndCalender__popup__eventDateTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 4px;
+}
+
+.filterAndCalender__popup__eventLocationTitle {
+  margin-top: 5px;
+}
+
+.filterAndCalender__popup__eventDateTitle {
+  margin-top: 16px;
+}
+
+.filterAndCalender__pastEvents,
+.filterAndCalender__bahceFuaye {
+  border-bottom: none !important;
+}
+
+.filterAndCalender__calendarPopup {
+  width: 100%;
+  max-width: 600px;
+  min-height: 500px;
+  max-height: 800px;
+  overflow-y: auto;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(-50%, -50%);
+  margin: auto;
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0px 4px 50px rgba(81, 81, 81, 0.2);
+  padding: 1em;
+}
+.filterAndCalender__calendarPopup h3 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.filterAndCalender__calenderPopup__inner img {
+  display: block;
+  margin-inline: auto;
+}
+
+.filterAndCalender__calenderPopup__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.filterAndCalender__calenderPopup__inner p {
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.filterAndCalender__eventNotSelected {
+  text-align: center;
+}
+
+.filterAndCalender__calendarPopup__closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.filterAndCalender__calendarPopup__closeButton:hover {
+  color: red;
+}
+
+@media (max-width: 1025px) {
+  .header__searchBox {
+    position: static;
+    margin: 16px 0;
+  }
+
+  .header__tags__item::before {
+    bottom: -22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 0;
+    margin: 1em 0;
+  }
+  .header__title {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__tags {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: auto;
+    justify-items: center;
+    margin: 10px 0;
+    width: 90%;
+    place-items: center;
+    margin-inline: auto;
+  }
+
+  .filterAndCalender__calendarPopup {
+    width: 90%;
+  }
+}
